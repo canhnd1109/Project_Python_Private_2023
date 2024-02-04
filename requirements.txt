@@ -1,0 +1,7 @@
+numpy==1.24.3
+opencv-python==4.9.0.80
+pandas==2.0.3
+pillow==9.4.0
+rembg==2.0.54
+streamlit==1.30.0
+streamlit-image-coordinates==0.1.6
