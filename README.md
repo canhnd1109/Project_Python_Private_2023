@@ -1,8 +1,7 @@
 # Image Editing App
-***
 ## Giới thiệu
 Image Editing App là một công cụ giúp bạn chỉnh sửa và tối ưu hóa hình ảnh một cách dễ dàng với các chức năng cơ bản.
-***
+
 ## Cài đặt
 Để cài công cụ chỉnh sửa ảnh trên bạn làm theo các bước sau:
 - Bước 1: clone repository về máy tính của bạn:
