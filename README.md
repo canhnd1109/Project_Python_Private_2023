@@ -19,7 +19,7 @@ pip install -r requirements.txt
     streamlit run app.py
     ```
 ## Yêu cầu hệ thống
-- 3.8=< python <3.12
+- 3.8<=python<3.12
 - Các package trong file requirements.txt
 ## Hướng dẫn sử dụng
 1. Chọn ảnh từ máy tính hoặc sử dụng webcam.
