@@ -8,8 +8,7 @@ import pandas as pd
 from PIL import Image, ImageEnhance, ImageFilter
 from rembg import remove
 import streamlit as st
-from streamlit_image_coordinates import streamlit_image_coordinates
-
+from streamlit_image_coordinates import streamlit_image_coordinates 
 
 current_page = st.sidebar.radio("", ["👋Hello", "feature", "feedback"])
 
@@ -47,7 +46,14 @@ if current_page == "feature":
         
         img_array = np.array(image) # Chuyển đổi ảnh từ PIL Image sang NumPy array
 
-        height, width, _ = img_array.shape
+        if len(img_array.shape) == 3:  # Nếu ảnh có 3 chiều (có kênh màu)
+            height, width, _ = img_array.shape
+        elif len(img_array.shape) == 2:  # Nếu ảnh chỉ có 2 chiều (ảnh xám)
+            height, width = img_array.shape
+        else:
+            st.error("Không thể hiển thị ảnh với số chiều không hợp lệ.")
+            return
+        
         st.sidebar.write(f"Kích thước: {width, height}")
         st.sidebar.write(f'Tỉ lệ: {Fraction(width,height)}')
     
